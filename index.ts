@@ -2,7 +2,7 @@ import express from "express";
 import routerMessages from "./routers/masagess";
 
 const app = express();
-const port = 9000;
+const port = 8080;
 
 app.use(express.json());
 app.use("/messages", routerMessages)
