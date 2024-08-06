@@ -6,8 +6,6 @@ const routerMessages = Router();
 const path = "./messages";
 
 routerMessages.get("/", async (req, res) => {
-  res.send("Полученые сообщения");
-
   try {
     const files = await fs.readdir(path);
 
@@ -32,8 +30,6 @@ routerMessages.get("/", async (req, res) => {
 });
 
 routerMessages.post("/add", async (req, res) => {
-  res.send("Отправленые сообщения");
-
   const messageItem: Props = {
     message: req.body.message,
     datetime: new Date().toISOString().replace(/:/g, "_"),

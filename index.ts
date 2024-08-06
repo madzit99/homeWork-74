@@ -2,10 +2,10 @@ import express from "express";
 import routerMessages from "./routers/masagess";
 
 const app = express();
-const port = 8080;
+const port = 9090;
 
 app.use(express.json());
-app.use("/messages", routerMessages)
+app.use("/messages", routerMessages);
 
 const run = async () => {
   app.listen(port, () => {
